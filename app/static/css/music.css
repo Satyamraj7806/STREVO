@@ -1,0 +1,224 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #0f0f0f;
+  color: #fff;
+  margin: 0;
+  padding-bottom: 4rem;
+  /* room for bottom nav */
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #181818;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.nav-title {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* Container */
+.container {
+  padding: 1rem;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+/* Section Titles */
+.section {
+  margin-bottom: 1.5rem;
+}
+
+.section-title {
+  margin-bottom: 0.75rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* ================= Categories (horizontal) ================= */
+.categories {
+  display: flex;
+  overflow-x: auto;
+  gap: 0.75rem;
+  padding-bottom: 0.5rem;
+}
+
+.category-card {
+  flex-shrink: 0;
+  width: 100px;
+  text-align: center;
+}
+
+.category-card img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.category-card p {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* ================= Top Artists (grid) ================= */
+.artists {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 0.75rem;
+}
+
+.artist-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.75rem;
+  border-radius: 12px;
+  color: #fff;
+}
+
+.artist-card img {
+  width: 60%;
+  border-radius: 50%;
+  margin-bottom: 0.5rem;
+}
+
+.artist-card .name {
+  font-weight: 600;
+}
+
+.artist-card .role {
+  font-size: 0.8rem;
+  color: #ddd;
+}
+
+/* ================= Trending Songs (list) ================= */
+.trending {
+  list-style: none;
+}
+
+.song {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #222;
+}
+
+.song img {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-right: 0.75rem;
+}
+
+.song .info {
+  flex: 1;
+}
+
+.song-title {
+  font-size: 1rem;
+}
+
+.artist-name {
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+.duration {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+/* ================= Sidebar & Overlay (same as before) ================= */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 220px;
+  height: 100vh;
+  background: #181818;
+  padding: 2rem 1rem;
+  transition: left 0.3s;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 200;
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+.sidebar nav ul {
+  list-style: none;
+}
+
+.sidebar nav ul li {
+  margin-bottom: 1.5rem;
+}
+
+.sidebar nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  display: none;
+  z-index: 150;
+}
+
+.overlay.active {
+  display: block;
+}
+
+/* ================= Bottom Navigation ================= */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #181818;
+  display: flex;
+  justify-content: space-around;
+  padding: 0.5rem 0;
+  border-top: 1px solid #222;
+  z-index: 100;
+}
+
+.bottom-nav button {
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.bottom-nav button:hover {
+  color: #fff;
+}
+

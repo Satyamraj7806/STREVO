@@ -1,0 +1,115 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='css/register.css') }}">
+{% extends "base.html" %}
+
+{% block title %}
+Music
+{% endblock %}
+
+{% block content %}
+
+<div class="container" id="container" class="{% if view == 'register' %}right-panel-active{% endif %}">
+    {{ register_form.hidden_tag() }}
+    <div class="form-container sign-up-container">
+        <form method="POST">
+            {{ register_form.hidden_tag() }}
+            <h1>Create Account</h1>
+            <div class="social-container">
+                <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+
+            {{ register_form.username(class="form-control", placeholder="Username") }}
+            {% for error in register_form.username.errors %}
+            <div class="text-danger">
+                {{error}}
+            </div>
+            {%endfor%}
+
+            {{ register_form.email_id(class="form-control", placeholder="Email") }}
+            {% for error in register_form.email_id.errors %}
+            <div class="text-danger">
+                {{error}}
+            </div>
+            {%endfor%}
+
+            {{ register_form.password1(class="form-control", placeholder="Password") }}
+            {% for error in register_form.password1.errors %}
+            <div class="text-danger">
+                {{error}}
+            </div>
+            {%endfor%}
+
+            {{ register_form.password2(class="form-control", placeholder="Confirm Password") }}
+            {% for error in register_form.password2.errors %}
+            <div class="text-danger">{{error}}</div>
+            {%endfor%}
+
+            {{ register_form.Submit(class="ghost") }}
+        </form>
+    </div>
+
+    {{ login_form.hidden_tag() }}
+
+    <div class="form-container sign-in-container">
+        <form method="POST">
+            {{ login_form.hidden_tag() }}
+            <h1>Sign in</h1>
+            <div class="social-container">
+                <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+
+            {{ login_form.username(class="form-control", placeholder="Username") }}
+            {% for error in login_form.username.errors%}
+            <div class="text-danger">{{error}}</div>
+            {%endfor%}
+
+            {{ login_form.password1(class="form-control", placeholder="Password") }}
+            {% for error in login_form.password1.errors %}
+            <div class="text-danger">{{error}}</div>
+            {%endfor%}
+
+            <a href="#">Forgot your password?</a>
+            {{ login_form.Submit(class="ghost") }}
+        </form>
+    </div>
+
+    <div class="overlay-container">
+        <div class="overlay">
+            <div class="overlay-panel overlay-left">
+                <h1>Welcome Back!</h1>
+                <p>Already have an accounnt? Login here</p>
+                <button class="ghost" id="Login">Sign In</button>
+            </div>
+            <div class="overlay-panel overlay-right">
+                <h1>New user?</h1>
+                <p>Create a new account</p>
+                <button class="ghost" id="Register">Sign Up</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- External CSS -->
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- JavaScript -->
+<script>
+    const RegisterButton = document.getElementById("Register");
+    const LoginButton = document.getElementById("Login");
+    const container = document.getElementById("container");
+
+    RegisterButton.addEventListener("click", () => {
+        container.classList.add("right-panel-active");
+    });
+
+    LoginButton.addEventListener("click", () => {
+        container.classList.remove("right-panel-active");
+    });
+</script>
+
+{% endblock %}

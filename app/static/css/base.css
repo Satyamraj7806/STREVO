@@ -1,0 +1,93 @@
+/* Body */
+body {
+  background-color: #282a36; /* Dracula background */
+  color: #f8f8f2; /* Foreground text */
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar */
+.navbar-custom {
+  background-color: #181820; /* Dark panel */
+  color: #f8f8f2;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+  color: #f8f8f2;
+  transition: color 0.3s ease;
+}
+
+.navbar-custom .nav-link:hover {
+  color: #bd93f9; /* Purple hover */
+}
+
+.login-register{
+  display: flex;
+  justify-content: center;
+}
+
+/* Brand / Logo */
+.big-brand {
+  font-size: 2rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white; /* Pink accent */
+  font-weight: bold;
+}
+
+/* Search icon */
+#searchToggle {
+  font-size: 1.2rem;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: #8be9fd; /* Cyan accent */
+}
+
+#searchToggle:hover {
+  color: #50fa7b; /* Green on hover */
+}
+
+/* Navbar items */
+.navbar-nav {
+  width: 200px;
+}
+
+.navbar-nav li a {
+  color: #f8f8f2;
+  padding: 10px 15px;
+  display: block;
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s;
+}
+
+.navbar-nav li a:hover {
+  background-color: #44475a; /* Current Line highlight */
+  color: #ffb86c; /* Orange hover text */
+  border-radius: 6px;
+}
+
+/* Active Nav Item */
+.navbar-nav li.active a {
+  background-color: #bd93f9; /* Purple active */
+  color: #282a36; /* Contrast text */
+  font-weight: bold;
+}
+
+/* Utility colors for later use */
+.text-muted { color: #6272a4; }   /* Comment color */
+.text-success { color: #50fa7b; } /* Green */
+.text-danger { color: #ff5555; }  /* Red */
+.text-warning { color: #ffb86c; } /* Orange */
+.text-info { color: #8be9fd; }    /* Cyan */
+.text-highlight { color: #f1fa8c; } /* Yellow */
+
+

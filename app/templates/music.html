@@ -1,0 +1,112 @@
+<link rel="stylesheet" href="{{url_for('static', filename = 'css/music.css')}}">
+{% extends "base.html" %}
+
+{% block title %}
+Music
+{%endblock%}
+
+{% block content %}
+
+
+<main class="container">
+
+    <!-- Categories -->
+    <section class="section">
+        <h2 class="section-title">Categories</h2>
+        <div class="categories">
+            <div class="category-card"><img src="../static/css/images/icons/musicimage1.png" alt="">
+                <p><b>Lo-fi beats</b></p>
+            </div>
+            <div class="category-card"><img src="../static/css/images/icons/musicimage2.png" alt="">
+                <p><b>Ghazal hits</b></p>
+            </div>
+            <div class="category-card"><img src="../static/css/images/icons/musicimage3.png" alt="">
+                <p><b>20's Gold</b></p>
+            </div>
+            <div class="category-card"><img src="../static/css/images/icons/musicimage4.png" alt="">
+                <p><b>90's hits</b></p>
+            </div>
+            <div class="category-card"><img src="../static/css/images/icons/musicimage5.png" alt="">
+                <p><b>HIP-HOP</b></p>
+            </div>
+            <div class="category-card"><img src="../static/css/images/icons/musicimage6.png" alt="">
+                <p><b></b>Top Artists</b></p>
+            </div>
+            <!-- add more cards as needed -->
+        </div>
+    </section>
+
+    <!-- Top Artists -->
+    <section class="section">
+        <h2 class="section-title">Top Artists</h2>
+        <div class="artists">
+            <div class="artist-card" style="background:transparent">
+                <img src="../static/css/images/icons/arijit.png" alt="">
+                <p class="name">Arijit Singh</p>
+                <p class="role">Artist</p>
+            </div>
+            <div class="artist-card" style="background:transparent">
+                <img src="../static/css/images/icons/kk.png" alt="">
+                <p class="name">KK</p>
+                <p class="role">Artist</p>
+            </div>
+            <div class="artist-card" style="background:transparent">
+                <img src="../static/css/images/icons/jagjeet.png" alt="">
+                <p class="name">Jagjeet Singh</p>
+                <p class="role">Artist</p>
+            </div>
+            <div class="artist-card" style="background:transparent">
+                <img src="../static/css/images/icons/irfaan.png" alt="">
+                <p class="name">Mohd Irfaan</p>
+                <p class="role">Artist</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trending Songs -->
+    <section class="section">
+        <h2 class="section-title">Trending</h2>
+        <ul class="trending">
+            <li class="song">
+                <img src="../static/css/images/icons/musicimage6.png" alt="">
+                <div class="info">
+                    <p class="song-title">Aaoge Tum Kabhi</p>
+                    <p class="artist-name">The Local Train</p>
+                </div>
+                <span class="duration">3:20</span>
+            </li>
+            <li class="song">
+                <img src="../static/css/images/icons/musicimage7.png" alt="">
+                <div class="info">
+                    <p class="song-title">Ek Raat</p>
+                    <p class="artist-name">Vilen</p>
+                </div>
+                <span class="duration">2:58</span>
+            </li>
+            <li class="song">
+                <img src="../static/css/images/icons/musicimage8.png" alt="">
+                <div class="info">
+                    <p class="song-title">Jiya Lage Na</p>
+                    <p class="artist-name">Sona Mahapatra</p>
+                </div>
+                <span class="duration">3:23</span>
+            </li>
+            <li class="song">
+                <img src="../static/css/images/icons/musicimage9.png" alt="">
+                <div class="info">
+                    <p class="song-title">Khairiyat</p>
+                    <p class="artist-name">Arijit Singh</p>
+                </div>
+                <span class="duration">2:21</span>
+            </li>
+            <li class="song">
+                <img src="../static/css/images/icons/musicimage10.png" alt="">
+                <div class="info">
+                    <p class="song-title">Lag Ja Gale</p>
+                    <p class="artist-name">Lata Mangeshkar</p>
+                </div>
+                <span class="duration">3:58</span>
+            </li>
+        </ul>
+    </section>
+    {%endblock%}

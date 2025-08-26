@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: #121217;
+  color: #fff;
+  line-height: 1.4;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #181820;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.nav-btn {
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.nav-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #fff;
+}
+/* In your global.css or index.css */
+body {
+  max-width: 400px;    /* or whatever your mobile width is */
+  margin: 0 auto;      /* center on large screens */
+}
+
+/* Hamburger icon */
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: #888;
+  position: relative;
+}
+.hamburger::before {
+  content: '';
+  top: -6px;
+  position: relative;
+}
+.hamburger::after {
+  content: '';
+  top: 4px;
+  position: relative;
+}
+
+/* Content area */
+.content {
+  padding: 1rem;
+}
+
+/* Section title */
+.section-title {
+  margin-bottom: 0.75rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Video card common */
+.video-card {
+  background-color: #1d1d24;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+.video-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.video-info {
+  padding: 0.75rem;
+}
+.video-info h3,
+.video-info h4 {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+  color: #fff;
+}
+.video-info p {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+/* Large vs square */
+.video-card.large {
+  width: 100%;
+}
+.video-row {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+.video-card.square {
+  flex: 1;
+}
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 220px;
+  height: 100vh;
+  background-color: #181820;
+  padding: 2rem 1rem;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 200;
+  transition: left 0.3s ease-in-out;
+}
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+}
+.sidebar nav ul li {
+  margin-bottom: 1.5rem;
+}
+.sidebar nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+.sidebar.active {
+  left: 0;
+}
+
+/* Overlay (click outside to close) */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: none;
+  z-index: 100;
+}
+.overlay.active {
+  display: block;
+}
